@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!--CSS-->
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset('css/sidebar.css') }}" rel="stylesheet" type="text/css">
 
     <title>Index</title>
 </head>
-<body>
-    <div class="container">
-        <div class="toggler">
-            <div class="botao">
-                <div class="img-toggler">
-                    <img src="{{ URL::asset('img/sidebar.png') }}" alt="">
-                </div>
-                <h1>INICIO</h1>
-                <a class="button" href="{{ route('crud-mesa.index') }}"><p>Perfil</p></a><br>
-                
-                <a class="button" href="{{ route('crud-mesa.index') }}"><p>Cardapio</p></a><br>
 
-                <a class="button" href="{{ route('crud-mesa.index') }}"><p>Mesas</p></a><br>
-                
-                <a class="button" href="{{ route('crud-mesa.index') }}"><p>Reservas</p></a><br>
-                
-                <a class="button" href="{{ route('crud-mesa.index') }}"><p>Avaliaçoes</p></a><br>
+<body>
+    <nav>
+        <div class="navbar-sidebar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <img src="{{ URL::asset('img/NextMeal.png') }}" alt="">
+                </div>
+                <div class="menu-items">
+
+                    <h1>Restaurante: {{ $login }}</h1>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="{{ route('crud-mesa.index') }}">Mesas</a></li>
+                    <li><a href="#">Reservas</a></li>
+                    <li><a href="#">Avaliações</a></li>
+                    <li><a href="{{ route('logout') }}">Sair</a></li>
+                </div>
             </div>
-            <!--BACK-END-->
+        </div>
+    </nav>
+    <div class="container">
+        <!--BACK-END
             <h1>Restaurante: {{ $login }}</h1>
             <a href="{{ url('home') }}">Cadastrar restaurante</a><br>
             <a href="{{ route('crud-mesa.index') }}">Cadastrar mesa</a><br>
             <a>ADM</a><br>
-            <a href="{{ route('logout') }}">Log-out</a> 
-        </div>
+            <a href="{{ route('logout') }}">Log-out</a>-->
+
         <div class="atualizacoes">
 
             <h1>Novidades</h1>
@@ -77,9 +89,11 @@
         <div class="imagem">
             <img src="{{ URL::asset('img/restaurante.jpg') }}" alt="">
         </div>
-        
+
+    </div>
     </div>
 
-    
+
 </body>
+
 </html>

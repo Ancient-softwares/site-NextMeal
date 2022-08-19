@@ -314,6 +314,7 @@ button[type=submit]:hover {
     color: #c80000;
     text-align: center;
     font-size: 1.7em;
+    height: 8vh;
 }
 
 .Vantagens p {

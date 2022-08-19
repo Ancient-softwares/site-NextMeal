@@ -164,38 +164,24 @@
       <div class="container">
         <div class="boxV">
           <h3>Esteja à frente da concorrência.</h3>
-          <p>Info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
+          <p>Conosco, o seu restaurante será movimentado da forma correta, onde poderão escolher o seu estabelecimento!
           </p>
         </div>
         <div class="boxV">
           <h3>Melhorar a logística do seu negócio.</h3>
-          <p>Info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
+          <p>Melhoria em organização, movimentação, vizibilidade, etc.
           </p>
         </div>
         <div class="boxV">
           <h3>Experiência que gera fidelidade do cliente.</h3>
-          <p>Info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
+          <p>Uma solução perfeita para você construir a fidelidade com seu cliente.
+              O NextMeal é a ponte entre o seu negócio e o público-alvo.
           </p>
         </div>
         <div class="boxV">
-          <h3>VANTAGEN 03 é coisa muito boa.</h3>
-          <p>Info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
-            info info info info info info info info info info
+          <h3>Optar pelo seu estabelecimento</h3>
+          <p>Utilizando o nosso sistema de reservas o seu cliente estará ligado diretamente ao seu restaurante
+             pois poderá escolher você!!
           </p>
         </div>
       </div>

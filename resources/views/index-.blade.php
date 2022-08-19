@@ -53,11 +53,11 @@
       <span class="close">&times;</span>
       <h2>Login</h2>
       <div class="corpin">
-      @if($errors->any())
+        @if($errors->any())
         <div class="alert alert-danger" role="alert">
-            {{ $errors->first() }}
+          {{ $errors->first() }}
         </div>
-      @endif
+        @endif
         <form method="POST" action="{{ route('autenticar') }}">
           <input type="text" placeholder="Insira o Usuário" name="login" required>
           <input type="password" placeholder="Insira a Senha" name="senha" required>

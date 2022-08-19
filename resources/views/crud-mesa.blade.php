@@ -12,16 +12,37 @@
     <!-- Styles -->
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{ URL::asset('css/sidebar.css') }}" rel="stylesheet" type="text/css">
 
     <title>Mesas</title>
 </head>
 
 <body>
-    <a href="{{ route('index') }}">Voltar</a>
-    <h1>Mesas</h1>
-    <hr>
-    
-
+    <nav>
+        <div class="navbar-sidebar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <img src="{{ URL::asset('img/NextMeal.png') }}" alt="">
+                </div>
+                <div class="menu-items">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="{{ route('crud-mesa.index') }}">Mesas</a></li>
+                    <li><a href="#">Reservas</a></li>
+                    <li><a href="#">Avaliações</a></li>
+                    <li><a href="{{ route('logout') }}">Sair</a></li>
+                    <li><a href="{{ route('index') }}">Voltar</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -118,7 +139,7 @@
                 <form action="{{ route('crud-mesa.update', $mesa->idMesa) }}" method="post">
                     @csrf
                     @method('PUT')
-                    
+
                     <div class="modal fade" id="editar{{ $mesa->idMesa }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -164,7 +185,7 @@
 
         </tbody>
     </table>
-    
+    </div>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Cadastrar mesa
