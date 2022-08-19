@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use App\Http\Controllers\CrudMesa;
 use App\Http\Controllers\LoginController;

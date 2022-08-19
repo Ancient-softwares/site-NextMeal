@@ -1,25 +1,54 @@
 // Get the modal
-var modal = document.getElementById("myModal");
+const modalRegistro = document.getElementById("modalRegistro");
+const modalLogin = document.getElementById("modalLogin");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+const btnRegistro = document.getElementById("btn-registro");
+const btnLogin = document.getElementById("btn-login");
+
+const btnAbrirRegistro = document.getElementById("btn-abrirRegistro");
+const btnAbrirLogin = document.getElementById("btn-abrirLogin")
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const fecharModalRegistro = document.getElementsByClassName("fechaRegistro");
+const fecharModalLogin = document.getElementsByClassName("fechaLogin");
+
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+btnRegistro.onclick = () => {
+  modalRegistro.style.display = "block";
+}
+// When the user clicks the button, open the modal 
+btnLogin.onclick = () => {
+  modalLogin.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+fecharModalRegistro.onclick = () => {
+  fecharModalRegistro.style.display = "none";
+}
+// When the user clicks on <span> (x), close the modal
+fecharModalLogin.onclick = () => {
+  fecharModalLogin.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+window.onclick = (event) => {
+  if (event.target == modalRegistro) modalRegistro.style.display = "none";
+  else if (event.target == modalLogin) modalLogin.style.display = 'none'; 
+}
+
+btnAbrirRegistro.onclick = (event) =>{
+  if(event.target == btnAbrirRegistro) {
+    modalLogin.style.display = "none";
+    modalRegistro.style.display = "block";
+
+  }
+}
+
+btnAbrirLogin.onclick = (event) =>{
+  if(event.target == btnAbrirLogin){
+    modalRegistro.style.display = "none";
+    modalLogin.style.display = "block";
   }
 }

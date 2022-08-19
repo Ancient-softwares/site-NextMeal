@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login page</title>
+  <title>NextMeal</title>
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
@@ -43,10 +43,10 @@
               <a href="#E">Aplicativo</a>
             </li>
             <li>
-            <a id="myBtn" href="#Login">Login</a>
+            <a id="btn-login" href="#Login">Login</a>
             </li>
             <li>
-            <!--<a id="myBtn" href="#Registro">Registro</a>-->
+            <a id="btn-registro" href="#Registro">Registro</a>
             </li>
             <li>
               <a href="#Contato">Contato</a>
@@ -57,9 +57,9 @@
     </div>
   </header>
 
-  <div id="myModal" class="modal">
+  <!-- -->
+  <div id="modalLogin" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
       <h2>Login</h2>
       <div class="corpin">
         @if($errors->any())
@@ -77,71 +77,49 @@
           <div class="btn-login">
 
             <input type="submit" class="btn btn-success" value="Entrar">
-            <a href="{{ route('registro') }}">Registrar-se</a>
+            <a id="btn-abrirRegistro">Registrar-se</a>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <!-- The Modal 
-<div id="myModal" class="modal">
+
+  
+  <div id="modalRegistro" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
       <h2>Registro</h2>
-        <div class="corpin">
+      <div class="corpin">
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
-                {{ $errors->first() }}
-            </div>
-        @endif
-            <form method="POST" action="{{ route('registrar') }}">
-                @csrf
-                <label>Nome do restaurante: </label>
-                <input class="caixa" type="text" name="nome">
-
-                <label>Telefone do restaurante: </label>
-                <input class="caixa" type="text" name="telefone">
-
-                <label>Cep do restaurante: </label>
-                <input class="caixa" type="text" name="cep">
-
-                <label>Login do restaurante: </label>
-                <input class="caixa" type="text" name="login">
-
-                <label>Senha: </label>
-                <input class="caixa" type="password" name="senha">
-
-                <div class="btns">
-                    <input type="submit" class="btn btn-success" value="Registrar">
-
-                    <input type="submit" class="btn btn-success" value="Login">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-            @if($errors->any())
         <div class="alert alert-danger" role="alert">
-            {{ $errors->first() }}
+          {{ $errors->first() }}
         </div>
-    @endif
+        @endif
+        <form method="POST" action="{{ route('registrar') }}">
+          @csrf
+          <label>Nome do restaurante: </label>
+          <input type="text" name="nome">
+          <br>
 
+          <label>Telefone do restaurante: </label>
+          <input type="text" name="telefone">
+          <br>
 
-    <form method="POST" action="{{ route('autenticar') }}">
-        @csrf
-        <label>Login: </label>
-        <input type="text" name="login">
-        <br>
+          <label>cep do restaurante: </label>
+          <input type="text" name="cep">
+          <br>
 
-        <label>Senha: </label>
-        <input type="password" name="senha">
-        <br>
-
-        <input type="submit" class="btn btn-success" value="Entrar">
-        <br>
-        <a href="{{ route('registro') }}">Registrar-se</a>
-    </form>
-          -->
+          <label>Senha: </label>
+          <input type="password" name="senha">
+          <br>
+          <div class="btn-login">
+            <input type="submit" class="btn btn-success" value="Registrar">
+            <a id="btn-abrirLogin">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<!---->
 
   <img class="back" src="{{ URL::asset('img/beck.png') }}">
   <!--NavBar-->
